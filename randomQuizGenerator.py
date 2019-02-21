@@ -38,7 +38,8 @@ print(content.read())
 #TODO: Generate random answers with one correct answers
     for questionNum in range(50):
         correctAnswer = capitals[states[questionNum]]
-        wrongAnswers = 
+        wrongAnswers = list(capitals.values())
+        del wrongAnswers[wrongAnswers.index(correctAnswer)]
 #TODO: Write 50 questions to a file and 50 key answers to another file
 
 
