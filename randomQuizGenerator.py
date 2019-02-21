@@ -33,10 +33,12 @@ content = open('quizfile15.txt')
 print(content.read())
     
 #TODO: Create the random list of keys
-states = list(capitals.keys())
-random.shuffle(states)
-
+    states = list(capitals.keys())
+    random.shuffle(states)
 #TODO: Generate random answers with one correct answers
+    for questionNum in range(50):
+        correctAnswer = capitals[states[questionNum]]
+        wrongAnswers = 
 #TODO: Write 50 questions to a file and 50 key answers to another file
 
 
