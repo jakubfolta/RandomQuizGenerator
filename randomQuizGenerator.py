@@ -43,7 +43,7 @@ for quizNum in range(35):
 #TODO: Write 50 questions to a file and 50 key answers to another file
         quizFile.write('%s. What is capital of %s?' % (questionNum + 1), states[questionNum])
         for i in range(4):
-            quizFile.write('')
+            quizFile.write('ABCD'[i] + ': ' + allAnswers[i])
 
 
 
