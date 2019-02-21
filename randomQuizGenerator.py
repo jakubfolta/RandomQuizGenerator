@@ -23,6 +23,8 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 'WestVirginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 #TODO: Generate 35 quiz files and answer key files
+#TODO: Create the header for quiz file
+#TODO: 
 #TODO: Generate random answers with one correct answers
 #TODO: Write 50 questions to a file and 50 key answers to another file
 #
