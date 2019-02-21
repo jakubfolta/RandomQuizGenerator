@@ -22,12 +22,16 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia',
 'WestVirginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
-#TODO: Generate 35 quiz files and answer key files
+#Generate 35 quiz files and answer key files
 for quizNum in range(35):
-    quizFile = open('quizfile%s' % (quizNum + 1), 'w')
-    quizFileAnswers = open('quizfileanswer%s' % (quizNum + 1), 'w')
-    
+    quizFile = open('quizfile%s.txt' % (quizNum + 1), 'w')
+    quizFileAnswers = open('quizfileanswer%s.txt' % (quizNum + 1), 'w')    
 #TODO: Create the header for quiz file
+    quizFile.write('Name:\n\nDate:\n\nPeriod\n\n')
+    quizFile.write('State Capitals Quiz (Form%s)' % (quizNum + 1))
+content = open('quizfile1.txt')
+print(content.read())
+    
 #TODO: Create the random list of keys
 #TODO: Generate random answers with one correct answers
 #TODO: Write 50 questions to a file and 50 key answers to another file
