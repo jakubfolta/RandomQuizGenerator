@@ -41,12 +41,12 @@ for quizNum in range(35):
         wrongAnswers = random.sample(wrongAnswers, 3)
         allAnswers = wrongAnswers + [correctAnswer]
         random.shuffle(allAnswers)
-# TODO: Write 50 questions to a file and 50 key answers to another file
-        quizFile.write('%s. What is capital of %s?\n' % ((questionNum + 1), states[questionNum]))
+# Write 50 questions to a file and 50 key answers to another file
+        quizFile.write('{}. What is capital of {}?\n'.format((questionNum + 1), states[questionNum]))
         for i in range(4):
-            quizFile.write('ABCD'[i] + ': ' + allAnswers[i] + '\n')
+            quizFile.write('{}: {}\n'.format('ABCD'[i], allAnswers[i]))
         quizFile.write('\n')
-        quizFileAnswers.write(str(questionNum + 1) + '. ' + correctAnswer + '\n')
+        quizFileAnswers.write('{}. {}\n'.format((questionNum + 1), 'ABCD'[allAnswers.index(correctAnswer)]))
 quizFile.close()
 quizFileAnswers.close()
 
