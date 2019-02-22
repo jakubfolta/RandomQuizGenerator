@@ -28,7 +28,8 @@ for quizNum in range(35):
     quizFileAnswers = open('quizfileanswer%s.txt' % (quizNum + 1), 'w')    
 # Create the header for quiz file
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
-    quizFile.write(' ' * 20 + 'State Capitals Quiz (Form%s)' % (quizNum + 1))  
+    quizFile.write(' ' * 20 + 'State Capitals Quiz (Form%s)' % (quizNum + 1))
+    quizFile.write('\n\n')
 # Create the random list of keys
     states = list(capitals.keys())
     random.shuffle(states)
@@ -41,10 +42,13 @@ for quizNum in range(35):
         allAnswers = wrongAnswers + [correctAnswer]
         random.shuffle(allAnswers)
 # TODO: Write 50 questions to a file and 50 key answers to another file
-        quizFile.write('%s. What is capital of %s?' % ((questionNum + 1), states[questionNum]))
+        quizFile.write('%s. What is capital of %s?\n' % ((questionNum + 1), states[questionNum]))
         for i in range(4):
-            quizFile.write('ABCD'[i] + ': ' + allAnswers[i])
+            quizFile.write('ABCD'[i] + ': ' + allAnswers[i] + '\n')
+        quizFile.write('\n')
         quizFileAnswers.write(str(questionNum + 1) + '. ' + correctAnswer + '\n')
+quizFile.close()
+quizFileAnswers.close()
 
 
 
