@@ -44,9 +44,8 @@ for quizNum in range(35):
         quizFile.write('%s. What is capital of %s?' % ((questionNum + 1), states[questionNum]))
         for i in range(4):
             quizFile.write('ABCD'[i] + ': ' + allAnswers[i])
-        quizFileAnswers.write(str(questionNum) + '.' + correctAnswer)
-quizFileAnswers.
-            
+        quizFileAnswers.write(str(questionNum + 1) + '. ' + correctAnswer + '\n')
+
 
 
 
