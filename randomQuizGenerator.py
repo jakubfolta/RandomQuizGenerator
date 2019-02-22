@@ -24,11 +24,11 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 
 # Generate 35 quiz files and answer key files
 for quizNum in range(35):
-    quizFile = open('quizfile%s.txt' % (quizNum + 1), 'w')
-    quizFileAnswers = open('quizfileanswer%s.txt' % (quizNum + 1), 'w')    
+    quizFile = open('quizfile{}.txt'.format(quizNum + 1), 'w')
+    quizFileAnswers = open('quizfileanswer{}.txt'.format(quizNum + 1), 'w')    
 # Create the header for quiz file
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
-    quizFile.write(' ' * 20 + 'State Capitals Quiz (Form%s)' % (quizNum + 1))
+    quizFile.write(' ' * 20 + 'State Capitals Quiz (Form{})'.format(quizNum + 1))
     quizFile.write('\n\n')
 # Create the random list of keys
     states = list(capitals.keys())
@@ -49,6 +49,7 @@ for quizNum in range(35):
         quizFileAnswers.write(str(questionNum + 1) + '. ' + correctAnswer + '\n')
 quizFile.close()
 quizFileAnswers.close()
+
 
 
 
